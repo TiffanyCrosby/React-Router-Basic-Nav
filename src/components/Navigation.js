@@ -1,20 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+ display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2%;
+  color: red;
+  font-size: 2.6rem;
+`;
 
 const Navigation = () => {
   return (
     <div>
-      <div className="App">
+      <StyledDiv className="App">
         <h1>React Router Mini</h1>
         <div>
-          <a href="">Home</a>
+          <Link to='/'>Home</Link>
         </div>
         <div>
-          <a href="">About</a>
+          <Link to='/about'>About</Link>
         </div>
         <div>
-          <a href="">Contact</a>
+          <Link to='/contact'>Contact</Link>
         </div>
-      </div>
+      </StyledDiv>
     </div>
   );
 };
